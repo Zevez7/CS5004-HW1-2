@@ -58,7 +58,7 @@ public class EmployeeTest {
   public void testGetWeeklyCheck() {
 
     Bruce.addHoursWorked(20.0);
-    PayCheck expected = new PayCheck(20.0, 50.00);
+    Paycheck expected = new Paycheck(20.0, 50.00);
     assertEquals(expected.toString(), Bruce.getWeeklyCheck().toString());
   }
 

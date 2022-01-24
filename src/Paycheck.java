@@ -1,4 +1,8 @@
-class PayCheck {
+/**
+ * Dat Nguyen This class represents a PayCheck. The paycheck has weeklyhours, payrate, and
+ * totalpay.
+ */
+class Paycheck {
 
   private Double weeklyHours;
   private Double payRate;
@@ -7,17 +11,17 @@ class PayCheck {
   /**
    * The constructor of the class is initialized with weeklyhours and payrate.
    * @param weeklyHours how many hours the employee worked this week
-   * @param payRate the hourly wages of the employee
+   * @param payRate     the hourly wages of the employee
    */
-  public PayCheck(Double weeklyHours, Double payRate) {
+  public Paycheck(Double weeklyHours, Double payRate) {
     this.weeklyHours = weeklyHours;
     this.payRate = payRate;
     this.totalPay = this.calculatePay();
   }
 
   /**
-   * Calculate the pay of the employee once the PayCheck constructor is initialized
-   * Work hours over 40hrs will be given a 1.5X for the payarate for overtime work.
+   * Calculate the pay of the employee once the PayCheck constructor is initialized Work hours over
+   * 40hrs will be given a 1.5X for the payarate for overtime work.
    * @return the total pay before taxes
    */
   public Double calculatePay() {
@@ -35,7 +39,7 @@ class PayCheck {
     } else {
       totalPay = this.payRate * this.weeklyHours;
     }
-    totalPay = Math.floor(totalPay*100) / 100.0;
+    totalPay = Math.floor(totalPay * 100) / 100.0;
     return totalPay;
   }
 

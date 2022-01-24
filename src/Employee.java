@@ -1,9 +1,8 @@
 /**
- * This is the emplyoee class with name, ID, hoursWorked, payrate, and totalPayAfterTax.
+ * This is the employee class with name, ID, hoursWorked, payrate, and totalPayAfterTax.
  */
 
 class Employee {
-
   private String name;
   private String employeeId;
   private Double hoursWorked;
@@ -60,11 +59,11 @@ class Employee {
    * Returns a paycheck object initiated with hoursWorked and payRate from the employee object.
    * @return a paycheck object
    */
-  public PayCheck getWeeklyCheck() {
-    PayCheck employeePayCheck = new PayCheck(this.hoursWorked, this.payRate);
-    this.totalPayAfterTax = Math.floor(employeePayCheck.getPayAfterTaxes()*100) / 100.0;
+  public Paycheck getWeeklyCheck() {
+    Paycheck employeePaycheck = new Paycheck(this.hoursWorked, this.payRate);
+    this.totalPayAfterTax = Math.floor(employeePaycheck.getPayAfterTaxes()*100) / 100.0;
 
-    return employeePayCheck;
+    return employeePaycheck;
   }
 
   /**
