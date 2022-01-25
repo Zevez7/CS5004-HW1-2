@@ -83,7 +83,7 @@ class Employee {
     DecimalFormat twoDecimal = new DecimalFormat("0.00");
 
     return "Name: " + this.name + "\nID: " + this.employeeId + "\nPayment after taxes: $ "
-        + twoDecimal.format(employeePaycheck.getPayAfterTaxes());
+        + twoDecimal.format(employeePaycheck.getPayAfterTaxesValue());
   }
 
   /**

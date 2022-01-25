@@ -9,7 +9,7 @@ class Paycheck {
   private double weeklyHours;
   private double payRate;
   private double totalPay;
-  private double payAfterTaxes;
+  private double payAfterTaxesValue;
 
   /**
    * The constructor of the class is initialized with weeklyhours and payrate.
@@ -61,22 +61,22 @@ class Paycheck {
    * @return the pay amount minus taxes
    */
   public double getPayAfterTaxes() {
-    double payAfterTaxesNum;
+    double payAfterTaxes;
     if (this.totalPay < 400.0) {
-      payAfterTaxesNum = this.totalPay - this.totalPay * 0.10;
+      payAfterTaxes = this.totalPay - this.totalPay * 0.10;
     } else {
-      payAfterTaxesNum = this.totalPay - this.totalPay * 0.15;
+      payAfterTaxes = this.totalPay - this.totalPay * 0.15;
     }
 
     // 3 decimal round down
-    this.payAfterTaxes = Math.floor(payAfterTaxesNum * 1000) / 1000;
+    this.payAfterTaxesValue = Math.floor(payAfterTaxes * 1000) / 1000;
 
-    // round up 2 decimal places
-    payAfterTaxesNum = Math.round(payAfterTaxesNum * 100.0) / 100.0;
+    // round up 3 decimal places
+    payAfterTaxes = Math.round(payAfterTaxes * 1000.0) / 1000.0;
 
 
-    System.out.println("get payaftertaxes " + payAfterTaxesNum);
-    return payAfterTaxesNum;
+    System.out.println("get payaftertaxes " + payAfterTaxes);
+    return payAfterTaxes;
   }
 
   /**
@@ -87,8 +87,12 @@ class Paycheck {
   public String toString() {
     DecimalFormat twoDecimal = new DecimalFormat("0.00");
     getPayAfterTaxes();
-    System.out.println("to string " + this.payAfterTaxes);
-    return "Payment after taxes: $ " + twoDecimal.format(this.payAfterTaxes);
+    System.out.println("to string " + this.payAfterTaxesValue);
+    return "Payment after taxes: $ " + twoDecimal.format(this.payAfterTaxesValue);
+  }
+
+  public double getPayAfterTaxesValue(){
+    return this.payAfterTaxesValue;
   }
 
   /**
@@ -99,6 +103,8 @@ class Paycheck {
   public double getWeeklyHours() {
     return weeklyHours;
   }
+
+
 
   /**
    * Return payrate from paycheck instance.
