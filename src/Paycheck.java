@@ -70,6 +70,11 @@ class Paycheck {
 
     // 3 decimal round down
     this.payAfterTaxes = Math.floor(payAfterTaxesNum * 1000) / 1000;
+
+    // round up 2 decimal places
+    payAfterTaxesNum = Math.round(payAfterTaxesNum * 100.0) / 100.0;
+
+
     System.out.println("get payaftertaxes " + payAfterTaxesNum);
     return payAfterTaxesNum;
   }
