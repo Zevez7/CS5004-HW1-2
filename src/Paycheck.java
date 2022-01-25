@@ -80,7 +80,7 @@ class Paycheck {
    * @return a string of the payment after taxes.
    */
   public String toString() {
-    DecimalFormat twoDecimal = new DecimalFormat( "#.00" );
+    DecimalFormat twoDecimal = new DecimalFormat( "0.00" );
 
     return "Payment after taxes: $ " + twoDecimal.format(getPayAfterTaxes());
   }
