@@ -1,3 +1,5 @@
+import java.text.DecimalFormat;
+
 /**
  * This is the employee class with name, ID, hoursWorked, payrate, and totalPayAfterTax.
  */
@@ -78,8 +80,10 @@ class Employee {
    */
   public String toString() {
     Paycheck employeePaycheck = this.getWeeklyCheck();
-    return String.format("Name: %s\nID: %s\nPayment after taxes: $ %.2f", this.name,
-        this.employeeId, employeePaycheck.getPayAfterTaxes());
+    DecimalFormat twoDecimal = new DecimalFormat("#.00");
+
+    return "Name: " + this.name + "\nID: " + this.employeeId + "\nPayment after taxes: $ " +
+        twoDecimal.format(employeePaycheck.getPayAfterTaxes());
   }
 
   /**

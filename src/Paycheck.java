@@ -1,3 +1,5 @@
+import java.text.DecimalFormat;
+
 /**
  * Dat Nguyen This class represents a PayCheck. The paycheck has weeklyhours, payrate, and
  * totalpay.
@@ -45,6 +47,7 @@ class Paycheck {
     return totalPay;
   }
 
+
   /**
    * Returns the totalPay before taxes.
    *
@@ -66,7 +69,7 @@ class Paycheck {
     } else {
       payAfterTaxes = this.totalPay - this.totalPay * 0.15;
     }
-    // 3 decimal round down
+    // 4 decimal round down
     payAfterTaxes = Math.floor(payAfterTaxes * 10000) / 10000;
     return payAfterTaxes;
   }
@@ -77,7 +80,9 @@ class Paycheck {
    * @return a string of the payment after taxes.
    */
   public String toString() {
-    return String.format("Payment after taxes: $% .3f", getPayAfterTaxes());
+    DecimalFormat twoDecimal = new DecimalFormat( "#.00" );
+
+    return "Payment after taxes: $ " + twoDecimal.format(getPayAfterTaxes());
   }
 
   /**
