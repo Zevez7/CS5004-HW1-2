@@ -1,6 +1,5 @@
 /**
- * Dat Nguyen
- * This class represents a PayCheck. The paycheck has weeklyhours, payrate, and
+ * Dat Nguyen This class represents a PayCheck. The paycheck has weeklyhours, payrate, and
  * totalpay.
  */
 class Paycheck {
@@ -11,6 +10,7 @@ class Paycheck {
 
   /**
    * The constructor of the class is initialized with weeklyhours and payrate.
+   *
    * @param weeklyHours how many hours the employee worked this week
    * @param payRate     the hourly wages of the employee
    */
@@ -21,8 +21,9 @@ class Paycheck {
   }
 
   /**
-   * Calculate the pay of the employee once the PayCheck class is initialized
-   * Work hours over 40hrs will be given a 1.5X for the payarate for overtime work.
+   * Calculate the pay of the employee once the PayCheck class is initialized Work hours over 40hrs
+   * will be given a 1.5X for the payarate for overtime work.
+   *
    * @return the total pay before taxes
    */
   public double calculatePay() {
@@ -42,13 +43,14 @@ class Paycheck {
     }
 
     // 2 decimal position
-//    totalPay = Math.floor(totalPay * 100) / 100.0;
+    //totalPay = Math.floor(totalPay * 100) / 100.0;
 
     return totalPay;
   }
 
   /**
    * Returns the totalPay before taxes.
+   *
    * @return the totalPay before taxes.
    */
   public double getTotalPay() {
@@ -57,6 +59,7 @@ class Paycheck {
 
   /**
    * Returns the pay amount minus taxes based the before pay amount.
+   *
    * @return the pay amount minus taxes
    */
   public double getPayAfterTaxes() {
@@ -66,13 +69,14 @@ class Paycheck {
     } else {
       payAfterTaxes = this.totalPay - this.totalPay * 0.15;
     }
-    // 3 decimal round down
-//    payAfterTaxes = Math.floor(payAfterTaxes * 100) / 100.0;
+    // 2 decimal round down
+    payAfterTaxes = Math.floor(payAfterTaxes * 100) / 100.0;
     return payAfterTaxes;
   }
 
   /**
    * Prints out a string statement that shows the payment after taxes.
+   *
    * @return a string of the payment after taxes.
    */
   public String toString() {
