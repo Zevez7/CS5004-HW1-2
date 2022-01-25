@@ -1,9 +1,9 @@
 
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
 
 /**
  * A JUnit test class for the Employee class.
@@ -28,13 +28,13 @@ public class EmployeeTest {
 
     // Test for positive work hours
     Bruce.addHoursWorked(20.0);
-    Double expectedPositiveHours = 20.0;
-    assertEquals(expectedPositiveHours, Bruce.getHoursWorked());
+    double expectedPositiveHours = 20.0;
+    assertEquals(expectedPositiveHours, Bruce.getHoursWorked(),0.001);
 
     // Test for negative work hours
     Bruce.addHoursWorked(-40.0);
-    Double expectedNegativeHours = 0.0;
-    assertEquals(expectedNegativeHours, Bruce.getHoursWorked());
+    double expectedNegativeHours = 0.0;
+    assertEquals(expectedNegativeHours, Bruce.getHoursWorked(),0.001);
 
   }
 
@@ -46,8 +46,8 @@ public class EmployeeTest {
 
     Bruce.addHoursWorked(20.0);
     Bruce.resetHoursWorked();
-    Double expected = 0.0;
-    assertEquals(expected, Bruce.getHoursWorked());
+    double expected = 0.0;
+    assertEquals(expected, Bruce.getHoursWorked(),0.001);
   }
 
   /**

@@ -1,9 +1,8 @@
-
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
 
 /**
  * A JUnit test class for the PayCheck class.
@@ -26,8 +25,8 @@ public class PaycheckTest {
   @Test
   public void testGetTotalPay() {
 
-    Double expected = 211.20;
-    assertEquals(expected, brucePaycheck.getTotalPay());
+    double expected = 211.20;
+    assertEquals(expected, brucePaycheck.getTotalPay(),0.001);
   }
 
   /**
@@ -39,14 +38,14 @@ public class PaycheckTest {
     // Test for taxes for paycheck under $400 @ 10% tax rate
     Paycheck under$400Paycheck = new Paycheck(30.0, 10.0);
 
-    Double under$400Expected = 270.00;
-    assertEquals(under$400Expected, under$400Paycheck.getPayAfterTaxes());
+    double under$400Expected = 270.00;
+    assertEquals(under$400Expected, under$400Paycheck.getPayAfterTaxes(),0.001);
 
     // Test for taxes for paycheck over $400 @ 15% tax rate
     Paycheck over$400Paycheck = new Paycheck(50.0, 10.0);
 
-    Double over$400Expected = 467.50;
-    assertEquals(over$400Expected, over$400Paycheck.getPayAfterTaxes());
+    double over$400Expected = 467.50;
+    assertEquals(over$400Expected, over$400Paycheck.getPayAfterTaxes(),0.001);
   }
 
   /**

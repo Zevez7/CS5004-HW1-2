@@ -4,16 +4,16 @@
  */
 class Paycheck {
 
-  private Double weeklyHours;
-  private Double payRate;
-  private Double totalPay;
+  private double weeklyHours;
+  private double payRate;
+  private double totalPay;
 
   /**
    * The constructor of the class is initialized with weeklyhours and payrate.
    * @param weeklyHours how many hours the employee worked this week
    * @param payRate     the hourly wages of the employee
    */
-  public Paycheck(Double weeklyHours, Double payRate) {
+  public Paycheck(double weeklyHours, double payRate) {
     this.weeklyHours = weeklyHours;
     this.payRate = payRate;
     this.totalPay = this.calculatePay();
@@ -24,16 +24,16 @@ class Paycheck {
    * 40hrs will be given a 1.5X for the payarate for overtime work.
    * @return the total pay before taxes
    */
-  public Double calculatePay() {
-    Double totalPay;
+  public double calculatePay() {
+    double totalPay;
 
     if (this.weeklyHours > 40.0) {
-      Double overtimeHours = this.weeklyHours - 40.0;
-      Double overtimePayRate = this.payRate * 1.5;
+      double overtimeHours = this.weeklyHours - 40.0;
+      double overtimePayRate = this.payRate * 1.5;
 
-      Double overtimePay = overtimeHours * overtimePayRate;
+      double overtimePay = overtimeHours * overtimePayRate;
 
-      Double normalPay = this.payRate * 40.0;
+      double normalPay = this.payRate * 40.0;
 
       totalPay = normalPay + overtimePay;
     } else {
@@ -47,7 +47,7 @@ class Paycheck {
    * Returns the totalPay before taxes.
    * @return the totalPay before taxes.
    */
-  public Double getTotalPay() {
+  public double getTotalPay() {
     return totalPay;
   }
 
@@ -55,8 +55,8 @@ class Paycheck {
    * Returns the pay amount minus taxes based the before pay amount.
    * @return the pay amount minus taxes
    */
-  public Double getPayAfterTaxes() {
-    Double payAfterTaxes;
+  public double getPayAfterTaxes() {
+    double payAfterTaxes;
     if (this.totalPay < 400.0) {
       payAfterTaxes = this.totalPay - this.totalPay * 0.10;
     } else {

@@ -5,9 +5,9 @@
 class Employee {
   private String name;
   private String employeeId;
-  private Double hoursWorked;
-  private Double payRate;
-  private Double totalPayAfterTax;
+  private double hoursWorked;
+  private double payRate;
+  private double totalPayAfterTax;
 
   /**
    * Constructor of Employee Class that initialize with these params below.
@@ -16,7 +16,7 @@ class Employee {
    * @param payRate payrate for the hourly wage
    */
 
-  public Employee(String name, String employeeId, Double payRate) {
+  public Employee(String name, String employeeId, double payRate) {
     this.name = name;
     this.employeeId = employeeId;
     this.hoursWorked = 0.0;
@@ -28,9 +28,9 @@ class Employee {
    * Add hours worked to the employee hoursWorked object.
    * @param hours hours worked by the employee
    */
-  public void addHoursWorked(Double hours) {
+  public void addHoursWorked(double hours) {
 
-    Double totalHours = this.hoursWorked + hours;
+    double totalHours = this.hoursWorked + hours;
 
     // check for negative hours
     if (totalHours < 0.0) {
@@ -51,7 +51,7 @@ class Employee {
    * Returns the class hoursWorked.
    * @return the class hoursWorked.
    */
-  public Double getHoursWorked() {
+  public double getHoursWorked() {
     return hoursWorked;
   }
 
