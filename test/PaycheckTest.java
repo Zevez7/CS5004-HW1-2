@@ -57,7 +57,7 @@ public class PaycheckTest {
   @Test
   public void testToString() {
 
-    String expected = "Payment after taxes: $ 190.08";
+    String expected = "Payment after taxes: $ 190.080";
     assertEquals(expected, brucePaycheck.toString());
   }
 

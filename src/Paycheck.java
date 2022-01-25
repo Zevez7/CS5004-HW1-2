@@ -66,8 +66,8 @@ class Paycheck {
     } else {
       payAfterTaxes = this.totalPay - this.totalPay * 0.15;
     }
-    // 2 decimal round down
-    payAfterTaxes = Math.floor(payAfterTaxes * 100) / 100.0;
+    // 3 decimal round down
+    payAfterTaxes = Math.floor(payAfterTaxes * 10000) / 10000;
     return payAfterTaxes;
   }
 
@@ -77,7 +77,7 @@ class Paycheck {
    * @return a string of the payment after taxes.
    */
   public String toString() {
-    return String.format("Payment after taxes: $% .2f", getPayAfterTaxes());
+    return String.format("Payment after taxes: $% .3f", getPayAfterTaxes());
   }
 
   /**
