@@ -71,9 +71,8 @@ class Paycheck {
     // 3 decimal round down
     this.payAfterTaxesValue = Math.floor(payAfterTaxes * 1000) / 1000;
 
-    // round up 3 decimal places
-    payAfterTaxes = Math.round(payAfterTaxes * 1000.0) / 1000.0;
-
+    // round up 4 decimal places
+    payAfterTaxes = Math.round(payAfterTaxes * 10000.0) / 10000.0;
 
     System.out.println("get payaftertaxes " + payAfterTaxes);
     return payAfterTaxes;
@@ -91,7 +90,7 @@ class Paycheck {
     return "Payment after taxes: $ " + twoDecimal.format(this.payAfterTaxesValue);
   }
 
-  public double getPayAfterTaxesValue(){
+  public double getPayAfterTaxesValue() {
     return this.payAfterTaxesValue;
   }
 
@@ -103,7 +102,6 @@ class Paycheck {
   public double getWeeklyHours() {
     return weeklyHours;
   }
-
 
 
   /**
