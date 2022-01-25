@@ -66,8 +66,11 @@ class Paycheck {
     } else {
       payAfterTaxes = this.totalPay - this.totalPay * 0.15;
     }
-    // 3 decimal round down
-    payAfterTaxes = Math.floor(payAfterTaxes * 1000) / 1000;
+//    System.out.println(payAfterTaxes);
+
+    // 2 decimal round down
+    payAfterTaxes = Math.floor(payAfterTaxes * 100) / 100;
+//    System.out.println(payAfterTaxes);
     return payAfterTaxes;
   }
 
