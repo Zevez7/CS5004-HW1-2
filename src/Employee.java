@@ -61,7 +61,7 @@ class Employee {
    */
   public Paycheck getWeeklyCheck() {
     Paycheck employeePaycheck = new Paycheck(this.hoursWorked, this.payRate);
-    this.totalPayAfterTax = Math.floor(employeePaycheck.getPayAfterTaxes() * 100) / 100.0;
+    this.totalPayAfterTax = employeePaycheck.getPayAfterTaxes();
 
     return employeePaycheck;
   }
@@ -72,7 +72,7 @@ class Employee {
    */
   public String toString() {
     this.getWeeklyCheck();
-    return String.format("Name: %s \nID: %s \nPayment after taxes: $ %.2f", this.name,
+    return String.format("Name: %s \nID: %s\nPayment after taxes: $ %.2f", this.name,
         this.employeeId, this.totalPayAfterTax);
   }
 }
