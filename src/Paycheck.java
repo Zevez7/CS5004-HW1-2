@@ -1,5 +1,6 @@
 /**
- * Dat Nguyen This class represents a PayCheck. The paycheck has weeklyhours, payrate, and
+ * Dat Nguyen
+ * This class represents a PayCheck. The paycheck has weeklyhours, payrate, and
  * totalpay.
  */
 class Paycheck {
@@ -20,8 +21,8 @@ class Paycheck {
   }
 
   /**
-   * Calculate the pay of the employee once the PayCheck constructor is initialized Work hours over
-   * 40hrs will be given a 1.5X for the payarate for overtime work.
+   * Calculate the pay of the employee once the PayCheck class is initialized
+   * Work hours over 40hrs will be given a 1.5X for the payarate for overtime work.
    * @return the total pay before taxes
    */
   public double calculatePay() {

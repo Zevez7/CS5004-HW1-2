@@ -69,7 +69,6 @@ public class EmployeeTest {
   public void testToString() {
 
     Bruce.addHoursWorked(20.0);
-    Bruce.getWeeklyCheck();
 
     String expected = "Name: Bruce \nID: 123 BATMAN \nPayment after taxes: $ 850.00";
     assertEquals(expected, Bruce.toString());
