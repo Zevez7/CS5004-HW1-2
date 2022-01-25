@@ -14,7 +14,7 @@ class Paycheck {
    * @param weeklyHours how many hours the employee worked this week
    * @param payRate     the hourly wages of the employee
    */
-  public Paycheck(double weeklyHours, double payRate) {
+  public Paycheck(double payRate, double weeklyHours) {
     this.weeklyHours = weeklyHours;
     this.payRate = payRate;
     this.totalPay = this.calculatePay();
