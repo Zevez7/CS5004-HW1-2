@@ -71,11 +71,15 @@ class Paycheck {
     // 3 decimal round down
     this.payAfterTaxesValue = Math.floor(payAfterTaxes * 1000) / 1000;
 
-    // round up 4 decimal places
-    payAfterTaxes = Math.round(payAfterTaxes * 10000.0) / 10000.0;
-
     System.out.println("get payaftertaxes " + payAfterTaxes);
-    return payAfterTaxes;
+    if (payAfterTaxes == 0) {
+      return 0.0;
+    } else if (payAfterTaxes <= 0.01) {
+      return 0.01;
+    } else {
+      return payAfterTaxes;
+    }
+
   }
 
   /**
