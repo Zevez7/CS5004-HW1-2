@@ -61,4 +61,21 @@ public class PaycheckTest {
     assertEquals(expected, brucePaycheck.toString());
   }
 
+  /**
+   * Test the getweeklyhours methods.
+   */
+  @Test
+  public void testGetWeeklyHours() {
+    double expected = 10.56;
+    assertEquals(expected, brucePaycheck.getWeeklyHours(), 0.001);
+  }
+
+  /**
+   * Test the getpayrate methods.
+   */
+  @Test
+  public void testGetPayRate() {
+    double expected = 20.0;
+    assertEquals(expected, brucePaycheck.getPayRate(), 0.001);
+  }
 }

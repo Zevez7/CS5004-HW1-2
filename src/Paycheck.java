@@ -41,9 +41,6 @@ class Paycheck {
       totalPay = this.payRate * this.weeklyHours;
     }
 
-    // 2 decimal position
-    //totalPay = Math.floor(totalPay * 100) / 100.0;
-
     return totalPay;
   }
 
@@ -69,8 +66,8 @@ class Paycheck {
     } else {
       payAfterTaxes = this.totalPay - this.totalPay * 0.15;
     }
-    // 4 decimal round down
-    payAfterTaxes = Math.floor(payAfterTaxes * 10000) / 10000;
+    // 3 decimal round down
+    payAfterTaxes = Math.floor(payAfterTaxes * 1000) / 1000;
     return payAfterTaxes;
   }
 

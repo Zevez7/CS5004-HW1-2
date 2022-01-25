@@ -74,4 +74,34 @@ public class EmployeeTest {
     assertEquals(expected, Bruce.toString());
   }
 
+  /**
+   * Test getName.
+   */
+  @Test
+  public void testGetName() {
+
+    String expected = "Bruce";
+    assertEquals(expected, Bruce.getName());
+  }
+
+  /**
+   * Test getEmployeeId.
+   */
+  @Test
+  public void testGetEmployeeId() {
+
+    String expected = "123 BATMAN";
+    assertEquals(expected, Bruce.getEmployeeId());
+  }
+
+  /**
+   * Test getPayRate.
+   */
+  @Test
+  public void testGetPayRate() {
+
+    double expected = 50.00;
+    assertEquals(expected, Bruce.getPayRate(), 0.001);
+  }
+
 }
