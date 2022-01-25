@@ -32,11 +32,8 @@ class Paycheck {
     if (this.weeklyHours > 40.0) {
       double overtimeHours = this.weeklyHours - 40.0;
       double overtimePayRate = this.payRate * 1.5;
-
       double overtimePay = overtimeHours * overtimePayRate;
-
       double normalPay = this.payRate * 40.0;
-
       totalPay = normalPay + overtimePay;
     } else {
       totalPay = this.payRate * this.weeklyHours;
@@ -81,5 +78,23 @@ class Paycheck {
    */
   public String toString() {
     return String.format("Payment after taxes: $% .2f", getPayAfterTaxes());
+  }
+
+  /**
+   * Return weeklyhours from paycheck instance.
+   *
+   * @return weeklyHours from paycheck instance.
+   */
+  public double getWeeklyHours() {
+    return weeklyHours;
+  }
+
+  /**
+   * Return payrate from paycheck instance.
+   *
+   * @return payrate from paycheck instance.
+   */
+  public double getPayRate() {
+    return payRate;
   }
 }

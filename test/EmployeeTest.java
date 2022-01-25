@@ -29,12 +29,12 @@ public class EmployeeTest {
     // Test for positive work hours
     Bruce.addHoursWorked(20.0);
     double expectedPositiveHours = 20.0;
-    assertEquals(expectedPositiveHours, Bruce.getHoursWorked(),0.001);
+    assertEquals(expectedPositiveHours, Bruce.getHoursWorked(), 0.001);
 
     // Test for negative work hours
     Bruce.addHoursWorked(-40.0);
     double expectedNegativeHours = 0.0;
-    assertEquals(expectedNegativeHours, Bruce.getHoursWorked(),0.001);
+    assertEquals(expectedNegativeHours, Bruce.getHoursWorked(), 0.001);
 
   }
 
@@ -47,18 +47,18 @@ public class EmployeeTest {
     Bruce.addHoursWorked(20.0);
     Bruce.resetHoursWorked();
     double expected = 0.0;
-    assertEquals(expected, Bruce.getHoursWorked(),0.001);
+    assertEquals(expected, Bruce.getHoursWorked(), 0.001);
   }
 
   /**
-   * Test getWeeklyCheck by checking the toString of the PayCheck obj inside Employee Obj.
-   * Check if a new PayCheck obj toString has the same output.
+   * Test getWeeklyCheck by checking the toString of the PayCheck obj inside Employee Obj. Check if
+   * a new PayCheck obj toString has the same output.
    */
   @Test
   public void testGetWeeklyCheck() {
 
     Bruce.addHoursWorked(20.0);
-    Paycheck expected = new Paycheck(20.0, 50.00);
+    Paycheck expected = new Paycheck(50.0, 20.0);
     assertEquals(expected.toString(), Bruce.getWeeklyCheck().toString());
   }
 
@@ -70,7 +70,7 @@ public class EmployeeTest {
 
     Bruce.addHoursWorked(20.0);
 
-    String expected = "Name: Bruce\nID: 123 BATMAN\nPayment after taxes: $ 935.00";
+    String expected = "Name: Bruce\nID: 123 BATMAN\nPayment after taxes: $ 850.00";
     assertEquals(expected, Bruce.toString());
   }
 

@@ -3,6 +3,7 @@
  */
 
 class Employee {
+
   private String name;
   private String employeeId;
   private double hoursWorked;
@@ -11,9 +12,10 @@ class Employee {
 
   /**
    * Constructor of Employee Class that initialize with these params below.
-   * @param name name of the employee.
+   *
+   * @param name       name of the employee.
    * @param employeeId employee identification.
-   * @param payRate payrate for the hourly wage.
+   * @param payRate    payrate for the hourly wage.
    */
 
   public Employee(String name, String employeeId, double payRate) {
@@ -26,6 +28,7 @@ class Employee {
 
   /**
    * Add hours worked to the employee hoursWorked object.
+   *
    * @param hours hours worked by the employee.
    */
   public void addHoursWorked(double hours) {
@@ -49,6 +52,7 @@ class Employee {
 
   /**
    * Returns the class hoursWorked.
+   *
    * @return the class hoursWorked.
    */
   public double getHoursWorked() {
@@ -57,10 +61,11 @@ class Employee {
 
   /**
    * Returns a paycheck object initiated with hoursWorked and payRate from the employee object.
+   *
    * @return a paycheck object.
    */
   public Paycheck getWeeklyCheck() {
-    Paycheck employeePaycheck = new Paycheck(this.hoursWorked, this.payRate);
+    Paycheck employeePaycheck = new Paycheck(this.payRate, this.hoursWorked);
     this.totalPayAfterTax = employeePaycheck.getPayAfterTaxes();
 
     return employeePaycheck;
@@ -68,11 +73,39 @@ class Employee {
 
   /**
    * Returns a string of with the name, id, and payment after taxes.
+   *
    * @return string of with the name, id, and payment after taxes.
    */
   public String toString() {
     Paycheck employeePaycheck = this.getWeeklyCheck();
     return String.format("Name: %s\nID: %s\nPayment after taxes: $ %.2f", this.name,
         this.employeeId, employeePaycheck.getPayAfterTaxes());
+  }
+
+  /**
+   * Return name from employee instance.
+   *
+   * @return name from employee instance.
+   */
+  public String getName() {
+    return name;
+  }
+
+  /**
+   * Return employeeId from employee instance.
+   *
+   * @return employeeId from employee instance.
+   */
+  public String getEmployeeId() {
+    return employeeId;
+  }
+
+  /**
+   * Return payrate from employee instance.
+   *
+   * @return payrate from employee instance.
+   */
+  public double getPayRate() {
+    return payRate;
   }
 }
