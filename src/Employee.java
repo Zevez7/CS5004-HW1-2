@@ -72,7 +72,7 @@ class Employee {
    */
   public String toString() {
     this.getWeeklyCheck();
-    return String.format("Name: %s \nID: %s\nPayment after taxes: $ %.2f", this.name,
+    return String.format("Name: %s\nID: %s\nPayment after taxes: $ %.2f", this.name,
         this.employeeId, this.totalPayAfterTax);
   }
 }

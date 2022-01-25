@@ -28,7 +28,7 @@ public class PaycheckTest {
 
     Paycheck brucePaycheck2 = new Paycheck(23.345, 10.56);
 
-    double expected2 = 246.52;
+    double expected2 = 246.5232;
     assertEquals(expected2, brucePaycheck2.getTotalPay(),0.001);
   }
 
