@@ -71,7 +71,6 @@ class Paycheck {
     // 3 decimal round down
     this.payAfterTaxesValue = Math.floor(payAfterTaxes * 1000) / 1000;
 
-    System.out.println("get payaftertaxes " + payAfterTaxes);
     if (payAfterTaxes == 0) {
       return 0.0;
     } else if (payAfterTaxes <= 0.01) {
@@ -90,7 +89,6 @@ class Paycheck {
   public String toString() {
     DecimalFormat twoDecimal = new DecimalFormat("0.00");
     getPayAfterTaxes();
-    System.out.println("to string " + this.payAfterTaxesValue);
     return "Payment after taxes: $ " + twoDecimal.format(this.payAfterTaxesValue);
   }
 

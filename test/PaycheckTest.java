@@ -41,7 +41,7 @@ public class PaycheckTest {
     Paycheck under$400Paycheck = new Paycheck(33.234, 11.111);
 
     double under$400Expected = 332.33;
-    //System.out.println(under$400Paycheck.getPayAfterTaxes());
+
     assertEquals(under$400Expected, under$400Paycheck.getPayAfterTaxes(), 0.01);
 
     // Test for taxes for paycheck over $400 @ 15% tax rate
