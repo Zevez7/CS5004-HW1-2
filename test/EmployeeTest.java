@@ -13,7 +13,7 @@ public class EmployeeTest {
   private Employee Bruce;
 
   /**
-   * Setup with a new Employee object initialization
+   * Setup with a new Employee instance initialization.
    */
   @Before
   public void setUp() {
@@ -21,7 +21,7 @@ public class EmployeeTest {
   }
 
   /**
-   * Test  addHoursWorked
+   * Test  addHoursWorked.
    */
   @Test
   public void testAddHoursWorked() {
@@ -39,7 +39,7 @@ public class EmployeeTest {
   }
 
   /**
-   * Test resetHoursWorked
+   * Test resetHoursWorked.
    */
   @Test
   public void testResetHoursWorked() {
@@ -51,8 +51,8 @@ public class EmployeeTest {
   }
 
   /**
-   * Test getWeeklyCheck by checking the toString of the PayCheck obj inside Employee Obj And check
-   * if a new PayCheck obj toString has the same output
+   * Test getWeeklyCheck by checking the toString of the PayCheck obj inside Employee Obj.
+   * Check if a new PayCheck obj toString has the same output.
    */
   @Test
   public void testGetWeeklyCheck() {
@@ -63,7 +63,7 @@ public class EmployeeTest {
   }
 
   /**
-   * Test toString
+   * Test toString.
    */
   @Test
   public void testToString() {
@@ -71,7 +71,7 @@ public class EmployeeTest {
     Bruce.addHoursWorked(20.0);
     Bruce.getWeeklyCheck();
 
-    String expected = "Name: Bruce \nID: 123 BATMAN \nPayment after taxes: $850.00";
+    String expected = "Name: Bruce \nID: 123 BATMAN \nPayment after taxes: $ 850.00";
     assertEquals(expected, Bruce.toString());
   }
 

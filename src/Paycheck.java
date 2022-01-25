@@ -71,6 +71,6 @@ class Paycheck {
    * @return a string of the payment after taxes.
    */
   public String toString() {
-    return String.format("Payment after taxes: $%.2f", getPayAfterTaxes());
+    return String.format("Payment after taxes: $% .2f", getPayAfterTaxes());
   }
 }

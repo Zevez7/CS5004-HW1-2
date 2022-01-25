@@ -11,9 +11,9 @@ class Employee {
 
   /**
    * Constructor of Employee Class that initialize with these params below.
-   * @param name name of the employee
-   * @param employeeId employee identification
-   * @param payRate payrate for the hourly wage
+   * @param name name of the employee.
+   * @param employeeId employee identification.
+   * @param payRate payrate for the hourly wage.
    */
 
   public Employee(String name, String employeeId, double payRate) {
@@ -26,7 +26,7 @@ class Employee {
 
   /**
    * Add hours worked to the employee hoursWorked object.
-   * @param hours hours worked by the employee
+   * @param hours hours worked by the employee.
    */
   public void addHoursWorked(double hours) {
 
@@ -41,7 +41,7 @@ class Employee {
   }
 
   /**
-   * Resets the worked hours to 0.0 for the class
+   * Resets the worked hours to 0.0 for the class.
    */
   public void resetHoursWorked() {
     this.hoursWorked = 0.0;
@@ -57,11 +57,11 @@ class Employee {
 
   /**
    * Returns a paycheck object initiated with hoursWorked and payRate from the employee object.
-   * @return a paycheck object
+   * @return a paycheck object.
    */
   public Paycheck getWeeklyCheck() {
     Paycheck employeePaycheck = new Paycheck(this.hoursWorked, this.payRate);
-    this.totalPayAfterTax = Math.floor(employeePaycheck.getPayAfterTaxes()*100) / 100.0;
+    this.totalPayAfterTax = Math.floor(employeePaycheck.getPayAfterTaxes() * 100) / 100.0;
 
     return employeePaycheck;
   }
@@ -71,7 +71,7 @@ class Employee {
    * @return string of with the name, id, and payment after taxes.
    */
   public String toString() {
-    return String.format("Name: %s \nID: %s \nPayment after taxes: $%.2f", this.name,
+    return String.format("Name: %s \nID: %s \nPayment after taxes: $ %.2f", this.name,
         this.employeeId, this.totalPayAfterTax);
   }
 }

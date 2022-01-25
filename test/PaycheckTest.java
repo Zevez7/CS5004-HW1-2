@@ -12,7 +12,7 @@ public class PaycheckTest {
   private Paycheck brucePaycheck;
 
   /**
-   * Setup with a new PayCheck initialization
+   * Setup with a new PayCheck initialization.
    */
   @Before
   public void setUp() {
@@ -20,7 +20,7 @@ public class PaycheckTest {
   }
 
   /**
-   * Test for the GetTotalPay method
+   * Test for the GetTotalPay method.
    */
   @Test
   public void testGetTotalPay() {
@@ -54,7 +54,7 @@ public class PaycheckTest {
   @Test
   public void testToString() {
 
-    String expected = "Payment after taxes: $190.08";
+    String expected = "Payment after taxes: $ 190.08";
     assertEquals(expected, brucePaycheck.toString());
   }
 
