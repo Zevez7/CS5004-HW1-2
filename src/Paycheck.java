@@ -1,8 +1,12 @@
+/**
+ * CS5004 HW1. SPRING 2022. Dat Nguyen.
+ */
+
 import java.text.DecimalFormat;
 
 /**
- * Dat Nguyen This class represents a PayCheck. The paycheck has weeklyhours, payrate, and
- * totalpay.
+ * Dat Nguyen This class represents a PayCheck.
+ * The paycheck has weeklyhours, payrate, and totalpay attributes.
  */
 class Paycheck {
 

@@ -1,3 +1,6 @@
+/**
+ * CS5004 HW1. SPRING 2022. Dat Nguyen.
+ */
 
 import static org.junit.Assert.assertEquals;
 
